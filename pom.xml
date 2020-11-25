@@ -19,21 +19,63 @@
 	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 </properties>
-	<distrubutionmanagement>
+	<distributionManagement>
 	
-	<releaserepository>
-		<id>nexus</id>
-		<name>ganesh solutions nexus release repository</name>
-		<url>http://65.0.105.3:9980/ganesh/repository/flipkart-release-master/</url>
-        </releaserepository>
+	    <repository>
+	      <id>nexus</id>
+	      <name>flipkart releases Repository</name>
+	      <url>http://15.206.127.132:9980/ganesh/repository/flipkart-release/</url>
+	    </repository>
+	    
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>flipkart Snapshot Repository </name>
+	      <url>http://15.206.127.132:9980/ganesh/repository/flipkart-snapshot/</url>
+	    </snapshotRepository>
+	    
+	</distributionManagement>
+	
+	<build>
+		<finalName>maven-web-application</finalName>
 		
-	<snapshotrepository>
-		<id>nexus</id>
-		<name>ganesh solutions nexus snapshot repository</name>
-		<url>http://65.0.105.3:9980/ganesh/repository/flipkart-master/</url>
-	</snapshotrepository>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.2.11.v20150529</version>
+				<configuration>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<webApp>
+						<contextPath>/maven-web-application</contextPath>
+					</webApp>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>true</downloadJavadocs>
+					<wtpversion>2.0</wtpversion>
+					<wtpContextName>maven-web-application</wtpContextName>
+				</configuration>
+			</plugin>
+			
+</plugins>
+	</build>
 	
-</distrubutionmanagement>
   
 </project>
 
