@@ -21,3 +21,17 @@
 </properties>
   
 </project>
+<distrubutionmanagement>
+	<releaserepository>
+		<id>nexus</id>
+		<name>ganesh solutions nexus release repository</name>
+		<url>http://65.0.105.3:9980/ganesh/repository/flipkart-release-master/</url>
+        </releaserepository>
+		
+	<snapshotrepository>
+		<id>nexus</id>
+		<name>ganesh solutions nexus snapshot repository</name>
+		<url>http://65.0.105.3:9980/ganesh/repository/flipkart-master/</url>
+	</snapshotrepository>
+</distrubutionmanagement>	
+				 
