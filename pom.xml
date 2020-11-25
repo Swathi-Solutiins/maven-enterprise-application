@@ -24,13 +24,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>flipkart releases Repository</name>
-	      <url>http://15.206.127.132:9980/ganesh/repository/flipkart-release/</url>
+	      <url>http://65.0.105.3:9980/ganesh/repository/flipkart-release-master/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>flipkart Snapshot Repository </name>
-	      <url>http://15.206.127.132:9980/ganesh/repository/flipkart-snapshot/</url>
+	      <url>http://65.0.105.3:9980/ganesh/repository/flipkart-master//</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
