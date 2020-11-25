@@ -33,7 +33,7 @@
 		
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<sonar.login>4718e956e04bf4e7ab5578d350c8d443b53ff567</sonar.login>
+		<sonar.login>cb30e0b265d8f0c151ab938075f948e63a43ea02</sonar.login>
 
 	</properties>
 
